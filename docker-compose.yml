@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  socat:
+    build: .
+    image: fphammerle/socat
+    security_opt: [no-new-privileges]
+    ports: ['1234:1234']
+    command: -d -d -v tcp4-listen:1234,fork 'exec:echo hello'
+    restart: unless-stopped
+
+# https://docs.docker.com/compose/compose-file/compose-file-v2/
