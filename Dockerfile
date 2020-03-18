@@ -6,5 +6,6 @@ RUN apk add --no-cache \
         socat=$SOCAT_PACKAGE_VERSION \
         tini=$TINI_PACKAGE_VERSION
 
+USER nobody
 ENTRYPOINT ["/sbin/tini", "--", "socat"]
 CMD ["-h"]
