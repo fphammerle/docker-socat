@@ -1,12 +1,30 @@
-version: '2'
+version: '2.2'
 
 services:
   socat:
     build: .
     image: fphammerle/socat
+    entrypoint: ''
+    # last resort if application does not support socks & http proxies
+    # and torsocks/proxychains/... cannot be applied.
+    # consider transparent proxying as an alternative (requires netfilter rules).
+    # socat v2 supports address chains:
+    # $ socat ... 'openssl-connect | socks4a:1.2.3.4:example.com:443,socksport=9050'
+    command: torsocks socat -d -d
+      tcp4-listen:8080,reuseaddr,fork
+      openssl-connect:example.com:443,verify=1
+    environment:
+      TORSOCKS_ALLOW_INBOUND: '1'
+      TORSOCKS_TOR_ADDRESS: 172.29.90.1
+       # cave: requires subprocesses to isolate individual connections
+      TORSOCKS_ISOLATE_PID: 0
+      TORSOCKS_LOG_LEVEL: '5'
+    network_mode: tor_proxy_network
+    ports: ['127.0.0.1:8080:8080']
+    cap_drop: [ALL]
     security_opt: [no-new-privileges]
-    ports: ['1234:1234']
-    command: -d -d -v tcp4-listen:1234,fork 'exec:echo hello'
+    cpus: 0.9
+    #memory: 32M
     restart: unless-stopped
 
 # https://docs.docker.com/compose/compose-file/compose-file-v2/
