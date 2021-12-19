@@ -16,7 +16,7 @@ services:
       TORSOCKS_ALLOW_INBOUND: '1'
       TORSOCKS_TOR_ADDRESS: 172.29.90.1
        # cave: requires subprocesses to isolate individual connections
-      TORSOCKS_ISOLATE_PID: 0
+      TORSOCKS_ISOLATE_PID: 1
       TORSOCKS_LOG_LEVEL: '5'
     network_mode: tor_proxy_network
     ports: ['127.0.0.1:8080:8080']
