@@ -14,5 +14,5 @@ RUN apk add --no-cache \
         torsocks=$TORSOCKS_PACKAGE_VERSION
 
 USER nobody
-ENTRYPOINT ["/sbin/tini", "--", "socat"]
-CMD ["-h"]
+ENTRYPOINT ["/sbin/tini", "--"]
+CMD ["socat", "-h"]

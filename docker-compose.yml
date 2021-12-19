@@ -4,7 +4,6 @@ services:
   socat:
     build: .
     image: fphammerle/socat
-    entrypoint: ''
     # last resort if application does not support socks & http proxies
     # and torsocks/proxychains/... cannot be applied.
     # consider transparent proxying as an alternative (requires netfilter rules).
