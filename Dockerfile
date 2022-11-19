@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.16.2
+FROM docker.io/alpine:3.16.3
 
 # https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 ARG CA_CERTIFICATES_PACKAGE_VERSION=20220614-r0
