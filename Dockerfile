@@ -1,7 +1,7 @@
 FROM docker.io/alpine:3.17.0
 
 # https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
-ARG CA_CERTIFICATES_PACKAGE_VERSION=20220614-r0
+ARG CA_CERTIFICATES_PACKAGE_VERSION=20220614-r2
 ARG SOCAT_PACKAGE_VERSION=1.7.4.3-r0
 ARG TINI_PACKAGE_VERSION=0.19.0-r0
 # obsolete in socat v2
