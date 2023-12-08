@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.18.5
+FROM docker.io/alpine:3.19.0
 
 # https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 # https://gitlab.alpinelinux.org/alpine/ca-certificates/-/commits/master
