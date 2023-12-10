@@ -1,12 +1,14 @@
-FROM docker.io/alpine:3.18.5
+FROM docker.io/alpine:3.19.0
 
 # https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 # https://gitlab.alpinelinux.org/alpine/ca-certificates/-/commits/master
-# https://git.alpinelinux.org/aports/log/main/ca-certificates?h=3.17-stable
+# https://git.alpinelinux.org/aports/log/main/ca-certificates?h=3.19-stable
 ARG CA_CERTIFICATES_PACKAGE_VERSION=20230506-r0
-# https://git.alpinelinux.org/aports/log/main/socat?h=3.18-stable
-ARG SOCAT_PACKAGE_VERSION=1.7.4.4-r1
-ARG TINI_PACKAGE_VERSION=0.19.0-r1
+# http://www.dest-unreach.org/socat/
+# https://git.alpinelinux.org/aports/log/main/socat?h=3.19-stable
+ARG SOCAT_PACKAGE_VERSION=1.8.0.0-r0
+# https://git.alpinelinux.org/aports/log/community/tini?h=3.19-stable
+ARG TINI_PACKAGE_VERSION=0.19.0-r2
 # obsolete in socat v2
 # http://www.dest-unreach.org/socat/doc/socat-addresschain.html
 ARG TORSOCKS_PACKAGE_VERSION=2.4.0-r0
