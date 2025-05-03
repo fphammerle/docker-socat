@@ -6,7 +6,7 @@ FROM docker.io/alpine:3.21.3
 ARG CA_CERTIFICATES_PACKAGE_VERSION=20241121-r1
 # http://www.dest-unreach.org/socat/
 # https://git.alpinelinux.org/aports/log/main/socat?h=3.21-stable
-ARG SOCAT_PACKAGE_VERSION=1.8.0.1-r0
+ARG SOCAT_PACKAGE_VERSION=1.8.0.3-r0
 # https://git.alpinelinux.org/aports/log/community/tini?h=3.21-stable
 ARG TINI_PACKAGE_VERSION=0.19.0-r3
 # obsolete in socat v2
