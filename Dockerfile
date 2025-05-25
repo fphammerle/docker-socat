@@ -11,8 +11,9 @@ ARG SOCAT_PACKAGE_VERSION=1.8.0.3-r0
 ARG TINI_PACKAGE_VERSION=0.19.0-r3
 # obsolete in socat v2
 # http://www.dest-unreach.org/socat/doc/socat-addresschain.html
+# https://gitlab.torproject.org/tpo/core/torsocks/-/blob/main/ChangeLog
 # https://git.alpinelinux.org/aports/log/community/torsocks?h=3.21-stable
-ARG TORSOCKS_PACKAGE_VERSION=2.4.0-r1
+ARG TORSOCKS_PACKAGE_VERSION=2.5.0-r0
 RUN apk add --no-cache \
         socat=$SOCAT_PACKAGE_VERSION \
         socat-scripts=$SOCAT_PACKAGE_VERSION \
