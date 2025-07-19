@@ -3,7 +3,7 @@ FROM docker.io/alpine:3.22.0
 # https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 # https://gitlab.alpinelinux.org/alpine/ca-certificates/-/commits/master
 # https://git.alpinelinux.org/aports/log/main/ca-certificates?h=3.22-stable
-ARG CA_CERTIFICATES_PACKAGE_VERSION=20241121-r2
+ARG CA_CERTIFICATES_PACKAGE_VERSION=20250619-r0
 # http://www.dest-unreach.org/socat/
 # https://git.alpinelinux.org/aports/log/main/socat?h=3.22-stable
 ARG SOCAT_PACKAGE_VERSION=1.8.0.3-r1
